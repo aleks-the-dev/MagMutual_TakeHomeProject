@@ -78,5 +78,11 @@ public class WebController {
 	
 	// maybe when a list appears, a user could click button next to each listed user to see their full info 
 	// (might be too complex to do by project deadline)
+	
+	// overall TO DO's: 
+	// add tests 
+	// fix date range logic 
+	// improve ui
+	// answer project questions
 
 }
