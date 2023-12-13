@@ -1,6 +1,6 @@
 package com.takehomeproject.MagMutual_AleksBelotserkovskaya;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -43,23 +43,20 @@ public class StoreUserData {
 	}
 	
 	public String getUsersByDateRange(String date1, String date2) { // TODO flesh out
-		// return dateToUserMapping.get(dateRange);
-		// for every date between and including date 1 and date2, 
-		// pull users from hashmap 
 		String usersInDateRange = "";
 		
-//		for (String date : dateToUserMapping.keySet()) {
-//			if (isDateBetweenRange(date, date1, date2)) {
-//				usersInDateRange = usersInDateRange + dateToUserMapping.get(date);
-//			}
-//		}
-		return usersInDateRange;
+		for (String date : dateToUserMapping.keySet()) {
+			if (isDateBetweenRange(date, date1, date2)) {
+				usersInDateRange = usersInDateRange + ", " + dateToUserMapping.get(date);
+			}
+		}
+		return usersInDateRange.substring(2);
 	}
 	
 	private boolean isDateBetweenRange(String date, String date1, String date2) {
-		Date dateToCheck = Date.valueOf(date);
-		Date startDate = Date.valueOf(date1);
-		Date endDate = Date.valueOf(date2);
+		Date dateToCheck = new Date(Integer.valueOf(date.substring(2,4)), Integer.valueOf(date.substring(5,7)), Integer.valueOf(date.substring(8))); 
+		Date startDate = new Date(Integer.valueOf(date1.substring(2,4)), Integer.valueOf(date1.substring(5,7)), Integer.valueOf(date1.substring(8)));
+		Date endDate = new Date(Integer.valueOf(date2.substring(2,4)), Integer.valueOf(date2.substring(5,7)), Integer.valueOf(date2.substring(8)));
 		return (dateToCheck.compareTo(startDate) >= 0) && (dateToCheck.compareTo(endDate) <= 0);
 	}
 	
