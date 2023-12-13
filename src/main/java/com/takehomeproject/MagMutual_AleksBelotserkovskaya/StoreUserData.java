@@ -42,7 +42,7 @@ public class StoreUserData {
 		return countryToUserMapping.get(country);
 	}
 	
-	public String getUsersByDateRange(String date1, String date2) { // TODO flesh out
+	public String getUsersByDateRange(String date1, String date2) {
 		String usersInDateRange = "";
 		
 		for (String date : dateToUserMapping.keySet()) {
