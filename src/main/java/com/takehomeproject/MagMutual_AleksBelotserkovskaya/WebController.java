@@ -81,7 +81,6 @@ public class WebController {
 	
 	// overall TO DO's: 
 	// add tests 
-	// fix date range logic 
 	// improve ui
 	// answer project questions
 
