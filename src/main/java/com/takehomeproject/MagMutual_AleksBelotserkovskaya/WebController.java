@@ -111,7 +111,7 @@ public class WebController {
 	
 	// overall TO DO's: 
 	// add tests 
-	// improve ui
+	// change date ranges to drop downs + add error messages
 	// answer project questions
 
 }
