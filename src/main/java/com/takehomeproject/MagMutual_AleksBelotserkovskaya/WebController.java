@@ -111,7 +111,9 @@ public class WebController {
 	
 	// overall TO DO's: 
 	// add tests 
-	// change date ranges to drop downs + add error messages
+	// change date ranges to drop downs + add error messages to all pages
+	// change drop downs to not be static and instead pull info from csv file OR hashmaps
 	// answer project questions
+	// if i have time, make it look prettier (mostly user info page) 
 
 }
