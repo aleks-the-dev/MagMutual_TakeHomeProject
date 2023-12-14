@@ -98,10 +98,14 @@ public class WebController {
 	// (might be too complex to do by project deadline)
 	
 	// overall TO DO's: 
-	// add tests 
-	// add error messages to all pages
-	// change drop downs to not be static and instead pull info from csv file OR hashmaps
-	// answer project questions
-	// if i have time, make it look prettier (mostly user info page) 
+	// 
+	// 1) add tests 
+	// 2) add error message to incorrect specific user input
+	// 3) change drop downs to not be static and instead pull info from csv file OR hashmaps
+	// ( for countries + professions) 
+	// 
+	// 4) answer project questions
+	// 
+	// 5) if i have time, make it look prettier (mostly user info page) 
 
 }
