@@ -17,6 +17,9 @@ public class WebController {
 		model.addAttribute("id", id);
 		s.storeUsers(fileName);
 		String info = s.getUsernameById(id);
+		if (info == null) {
+			info = "No users found. Try a different id.";
+		}
 		model.addAttribute("info", info);
 		return "specificuser";
 	}
@@ -100,12 +103,12 @@ public class WebController {
 	// overall TO DO's: 
 	// 
 	// 1) add tests 
-	// 2) add error message to incorrect specific user input
-	// 3) change drop downs to not be static and instead pull info from csv file OR hashmaps
+	//  
+	// 2) change drop downs to not be static and instead pull info from csv file OR hashmaps
 	// ( for countries + professions) 
 	// 
-	// 4) answer project questions
+	// 3) answer project questions
 	// 
-	// 5) if i have time, make it look prettier (mostly user info page) 
+	// 4) if i have time, make it look prettier (mostly user info page) 
 
 }
