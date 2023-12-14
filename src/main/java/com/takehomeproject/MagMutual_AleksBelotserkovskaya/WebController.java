@@ -28,7 +28,7 @@ public class WebController {
 	}
 	
 	// Endpoint to return a list of users created between a date range
-	@GetMapping("/usersByDateRange") // TODO 
+	@GetMapping("/usersByDateRange") 
 	public String usersByDateRange(@RequestParam(value="date1", required=false, defaultValue="World") String date1, 
 			@RequestParam(value="date2", required=false, defaultValue="World") String date2, Model model) {
 		model.addAttribute("date1", date1);
@@ -41,7 +41,7 @@ public class WebController {
 	}
 	
 	// Endpoint to return a list of users based on a specific profession
-	@GetMapping("/usersByJob") // TODO fix
+	@GetMapping("/usersByJob") 
 	public String usersByProfession(@RequestParam(value="job", required=false, defaultValue="World") String job, Model model) {
 		model.addAttribute("job", job);
 		s.storeUsers(fileName);
@@ -52,7 +52,7 @@ public class WebController {
 	}
 	
 	// Custom Endpoint that I designed on my own (get list of users by country).
-	@GetMapping("/usersByCountry") // TODO
+	@GetMapping("/usersByCountry") 
 	public String customEndpoint(@RequestParam(name="country", required=false, defaultValue="World") String country, Model model) {
 		model.addAttribute("country", country);
 		s.storeUsers(fileName);
@@ -61,6 +61,36 @@ public class WebController {
 		model.addAttribute("usersByCountry", usersByCountry);
 		return "usersbycountry";
 	}
+	
+	// Endpoint to go to page where you enter user id
+		@GetMapping("/userId") 
+		public String userId(Model model) {
+			return "enteruserid";
+		}
+		
+		// Endpoint to go to page where you enter country
+				@GetMapping("/countryInput") 
+				public String countryInput(Model model) {
+					return "entercountry";
+				}
+				
+				// Endpoint to go to page where you enter profession
+				@GetMapping("/jobInput") 
+				public String jobInput(Model model) {
+					return "enterjob";
+				}
+				
+				// Endpoint to go to page where you enter date range
+				@GetMapping("/dateRangeInput") 
+				public String dateRangeInput(Model model) {
+					return "enterdaterange";
+				}
+				
+				// Endpoint to go to Error page
+				@GetMapping("/error") // TODO how to make this work?
+				public String errorPage(Model model) {
+					return "errorpage";
+				}
 	
 	// ideas for verification and error messages: 
 	// incorrect city/country combo

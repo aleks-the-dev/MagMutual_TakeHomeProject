@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>User by Id</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|${info}!|" />
+    <p th:text="|${info}|" />
+    <a href='/userId'><button>Search by a Different Id</button></a>
+    <a href='/'><button>Back to Home Page</button></a>
 </body>
 </html>

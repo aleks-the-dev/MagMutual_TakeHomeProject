@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>User by Date Range</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|users by date range: ${usersByDateRange}|" />
+    <p th:text="|Users created between ${date1} and ${date2}: ${usersByDateRange}|" />
+        <a href='/dateRangeInput'><button>Search by a Different Date Range</button></a>
+    <a href='/'><button>Back to Home Page</button></a>
 </body>
 </html>

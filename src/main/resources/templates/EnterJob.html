@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Enter Profession</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Please select the Profession you would like to list users for: </p>
+
+<form method='GET' action='/usersByJob'>
+      <select name="job" id="job">
+        <option value="worker">Worker</option>
+        <option value="firefighter">Firefighter</option>
+        <option value="developer">Developer</option>
+        <option value="doctor">Doctor</option>
+        <option value="police officer">Police Officer</option>
+      </select>
+      <input type="submit" value="Search by Profession" />
+</form>
+<br>
+<a href='/'><button>Back to Home Page</button></a>
+</body>
+</html>

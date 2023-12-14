@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head> 
-    <title>Getting Started: Serving Web Content</title> 
+    <title>User by Country</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|users by Country: ${usersByCountry}|" />
+    <p th:text="|Users from ${country}: ${usersByCountry}|" />
+        <a href='/countryInput'><button>Search by a Different Country</button></a>
+    <a href='/'><button>Back to Home Page</button></a>
 </body>
 </html>
