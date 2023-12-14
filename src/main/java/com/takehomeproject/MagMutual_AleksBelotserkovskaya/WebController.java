@@ -109,6 +109,6 @@ public class WebController {
 	// 
 	// 3) answer project questions
 	// 
-	// 4) if i have time, make it look prettier (mostly user info page) 
+	// 4) if i have time, make it look prettier (mostly user info page + display of list of users) 
 
 }
