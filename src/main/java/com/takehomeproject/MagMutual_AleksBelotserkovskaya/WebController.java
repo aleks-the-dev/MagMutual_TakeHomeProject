@@ -18,7 +18,7 @@ public class WebController {
 		s.storeUsers(fileName);
 		String info = s.getUsernameById(id);
 		if (info == null) {
-			info = "No users found. Try a different id.";
+			info = "No users found. Confirm that your input was correct or try a different id.";
 		}
 		model.addAttribute("info", info);
 		return "specificuser";

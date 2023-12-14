@@ -31,6 +31,13 @@
       </select>
       <input type="submit" value="Search by Country" />
 </form>
+
+<h:selectManyListbox value="#{yourSelectedItemValue}">
+        <f:selectItems value="#{yourCollection}" var="f"
+                itemLabel="#{f.yourItemLabel}" itemValue="#{f.yourItemValue}" />
+</h:selectManyListbox>
+<input type="submit" value="Search by Country" />
+
 <br>
 
 <a href='/'><button>Back to Home Page</button></a>
