@@ -11,12 +11,6 @@ public class WebController {
 	StoreUserData s = new StoreUserData();
 	String fileName = "src/main/java/com/takehomeproject/MagMutual_AleksBelotserkovskaya/UserInformation.csv";
 	
-	@GetMapping("/greeting")
-	public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		model.addAttribute("name", name);
-		return "greeting";
-	}
-	
 	// Endpoint to return a specific user (and all associated information)
 	@GetMapping("/specificUser")
 	public String specificUser(@RequestParam(value="id", required=false, defaultValue="World") String id, Model model) {
@@ -63,34 +57,28 @@ public class WebController {
 	}
 	
 	// Endpoint to go to page where you enter user id
-		@GetMapping("/userId") 
-		public String userId(Model model) {
-			return "enteruserid";
-		}
+	@GetMapping("/userId") 
+	public String userId(Model model) {
+		return "enteruserid";
+	}
 		
-		// Endpoint to go to page where you enter country
-				@GetMapping("/countryInput") 
-				public String countryInput(Model model) {
-					return "entercountry";
-				}
+	// Endpoint to go to page where you enter country
+	@GetMapping("/countryInput") 
+		public String countryInput(Model model) {
+		return "entercountry";
+	}
 				
-				// Endpoint to go to page where you enter profession
-				@GetMapping("/jobInput") 
-				public String jobInput(Model model) {
-					return "enterjob";
-				}
+	// Endpoint to go to page where you enter profession
+	@GetMapping("/jobInput") 
+		public String jobInput(Model model) {
+		return "enterjob";
+	}
 				
-				// Endpoint to go to page where you enter date range
-				@GetMapping("/dateRangeInput") 
-				public String dateRangeInput(Model model) {
-					return "enterdaterange";
-				}
-				
-				// Endpoint to go to Error page
-				@GetMapping("/error") // TODO how to make this work?
-				public String errorPage(Model model) {
-					return "errorpage";
-				}
+	// Endpoint to go to page where you enter date range
+	@GetMapping("/dateRangeInput") 
+		public String dateRangeInput(Model model) {
+		return "enterdaterange";
+	}
 	
 	// ideas for verification and error messages: 
 	// incorrect city/country combo
@@ -111,7 +99,7 @@ public class WebController {
 	
 	// overall TO DO's: 
 	// add tests 
-	// change date ranges to drop downs + add error messages to all pages
+	// add error messages to all pages
 	// change drop downs to not be static and instead pull info from csv file OR hashmaps
 	// answer project questions
 	// if i have time, make it look prettier (mostly user info page) 
