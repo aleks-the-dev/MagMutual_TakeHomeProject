@@ -90,29 +90,5 @@ public class WebController {
 		public String dateRangeInput(Model model) {
 		return "enterdaterange";
 	}
-	
-	// ideas for verification and error messages: 
-	// incorrect city/country combo
-	// how to allow for user to input csv file + check for incorrect columns or data or format
-	// no user found, wrong spelling of name, etc. 
-	
-	// ideas for improving ui: 
-	// add buttons to screen for ease of usability 
-	// add text boxes to select user id
-	// or could choose dropdown of user id's
-	
-	// could do dropdown of countries
-	// date range - how to enter? 
-	// could also do dropdown of professions
-	
-	// maybe when a list appears, a user could click button next to each listed user to see their full info 
-	// (might be too complex to do by project deadline)
-	
-	// overall TO DO's: 
-	// 
-	// 1) change drop downs to not be static and instead pull info from csv file OR hashmaps
-	// ( for countries + professions) 
-	// 
-	// 2) answer project questions
 
 }

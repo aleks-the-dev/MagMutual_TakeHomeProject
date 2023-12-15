@@ -4,9 +4,7 @@ import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class StoreUserData {
-	
-	// how to make this scalable / easily configurable for future additions to data set? 
+public class StoreUserData { 
 	
 	ArrayList<User> users;
 	HashMap<String, String> idToUserMapping;
@@ -15,8 +13,6 @@ public class StoreUserData {
 	HashMap<String, String> dateToUserMapping;
 	ArrayList<String> countries;
 	ArrayList<String> jobs;
-	
-	// fileName = "src/main/java/com/takehomeproject/MagMutual_AleksBelotserkovskaya/UserInformation.csv";
 	
 	public void storeUsers(String fileName) {
 		users = new ArrayList<>();
@@ -80,13 +76,11 @@ public class StoreUserData {
 		}
 	}
 	
-	private void sortByProfession() { // do i want an array list of users or a string list?
+	private void sortByProfession() {
 		for (User u : users) {
 			if (professionToUserMapping.get(u.getProfession()) == null) {
 				professionToUserMapping.put(u.getProfession(), u.getUserName());
-				jobs.add(u.getProfession());
-				// System.out.println("added " + u.getProfession());
-				
+				jobs.add(u.getProfession());				
 			} else {
 				professionToUserMapping.put(u.getProfession(), professionToUserMapping.get(u.getProfession()) + ", " + u.getUserName());
 			}
@@ -98,14 +92,10 @@ public class StoreUserData {
 			if (countryToUserMapping.get(u.getCountry()) == null) {
 				countryToUserMapping.put(u.getCountry(), u.getUserName());
 				countries.add(u.getCountry());
-				// System.out.println("added " + u.getCountry());
-				// System.out.println("users: " + countryToUserMapping.get(u.getCountry()));
 			} else {
 				countryToUserMapping.put(u.getCountry(), countryToUserMapping.get(u.getCountry()) + ", " + u.getUserName());
 			}
-			//System.out.println("");
 		}
-		// System.out.println("users: " + countryToUserMapping.get("Gambia"));
 	}
 	
 	private void sortByDate() {

@@ -6,15 +6,10 @@ import java.util.Scanner;
 
 public class ReadCSVFile {
 	
-	public static ArrayList<User> readFile(String file) {
-		// read file
-		// for each line (row), create a user and fill in user data
-		// should we check for errors???   
+	public static ArrayList<User> readFile(String file) { 
 		
 		try {
-			// parsing a CSV file using Scanner 
 			
-			//String file = "src/main/java/com/takehomeproject/MagMutual_AleksBelotserkovskaya/UserInformation.csv";
 	        ArrayList<User> usersList = new ArrayList<>();
 
 	        Scanner scanner = new Scanner(new File(file));
@@ -23,7 +18,7 @@ public class ReadCSVFile {
 	        
 	        while (scanner.hasNextLine()) {
 	            line = scanner.nextLine();
-	            // System.out.println(line);
+
 	            String[] parts = line.split(",");
 	            
 	            User u = new User();
@@ -44,7 +39,7 @@ public class ReadCSVFile {
 	            usersList.add(u);
 	        }
 	        
-			scanner.close();  //closes the scanner
+			scanner.close();
 			return usersList;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
