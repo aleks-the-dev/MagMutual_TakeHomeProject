@@ -56,6 +56,7 @@ A list of technologies used within the project:
 - thymeleaf (Java XML/XHTML/HTML5 template engine)
 - JUnit + Jupiter for Unit Tests
 - GitHub for version control. 
+- Maven for dependency management. 
 
 ____________________________________________________________________
 
