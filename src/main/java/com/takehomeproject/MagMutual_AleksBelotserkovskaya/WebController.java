@@ -110,11 +110,9 @@ public class WebController {
 	
 	// overall TO DO's: 
 	// 
-	// 1) add tests 
-	//  
-	// 2) change drop downs to not be static and instead pull info from csv file OR hashmaps
+	// 1) change drop downs to not be static and instead pull info from csv file OR hashmaps
 	// ( for countries + professions) 
 	// 
-	// 3) answer project questions
+	// 2) answer project questions
 
 }
