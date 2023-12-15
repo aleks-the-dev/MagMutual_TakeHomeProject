@@ -26,14 +26,13 @@ $ npm start
 Side information: To use the application in a special environment use ```lorem ipsum``` to start
 ## FAQs
 ***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer to the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question, we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer to the third question with *italic words*.
+Answers to the following questions:
+o Anything else you would like to share?
+1. **What did you think of the project?**
+Answer to the first question.
+2. **What didn’t you like about the project?** 
+Answer to the second question.
+3. **How would you change the project or approach?**
+Answer to the third question.
 4. **Fourth question in bold**
+Answer to the fourth question.
