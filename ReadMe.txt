@@ -1,4 +1,7 @@
-# Table of Contents
+____________________________________________________________________
+
+Table of Contents
+
 1. General Project Info
 2. Goals
 3. Assumptions
@@ -7,9 +10,13 @@
 6. Running the Application
 7. Answers to Project Questions
 
+____________________________________________________________________
+
 General Info:
 
 This is the MagMutual Take Home Project, coded by Aleks Belotserkovskaya.
+
+____________________________________________________________________
 
 Goals:
 
@@ -24,14 +31,20 @@ Goals:
 
 3. Build a simple UI to display the information.
 
+____________________________________________________________________
+
 Assumptions:
 
 You can build it in any language/framework combination.
+
+____________________________________________________________________
 
 Deliverables:
 
 - Source code.
 - Answers to project questions.
+
+____________________________________________________________________
 
 Technologies:
 
@@ -44,12 +57,16 @@ A list of technologies used within the project:
 - JUnit + Jupiter for Unit Tests
 - GitHub for version control. 
 
+____________________________________________________________________
+
 Running the Application:
 
 cd into the project's root directory in terminal 
 and run the following command: 
 
 ./mvnw spring-boot:run
+
+____________________________________________________________________
 
 Answers to Project Questions:
 
@@ -70,6 +87,7 @@ Otherwise, the project was pretty similar to the type of work I am used to doing
 so not an unreasonable ask. 
 
 3. How would you change the project or approach?
+____________________________________________________________________
 
 Future Changes / Additions to my Approach:
 
@@ -85,6 +103,8 @@ For example, I would want to check for errors in input and allow for a wider ran
 rather than assuming that certain columns hold specific data. 
 I would also want to make inputting multiple CSV files an option.
 
+____________________________________________________________________
+
 Data Storage: 
 
 In terms of data storage, once the data is read into the StoreUserData class, 
@@ -92,38 +112,46 @@ it is then held in a mix of ArrayLists and HashMaps.
 If this program were to be used in the long run, I would definitely replace that structure 
 with use of a database that could be queried for this same information. 
 
+____________________________________________________________________
+
 Testing: 
 
 I created some JUnit tests but did not flesh them out as in-depth as I wanted to. 
 Given more time, I would go more into detail with these tests and check all possible edge cases. 
+
+____________________________________________________________________
 
 User Interface: 
 
 Finally, I would definitely make the UI look better - I did not use CSS or much Javascript here 
 since the project asked for a simple UI. I just focused on the logic and making sure the endpoints worked as expected. 
 
+____________________________________________________________________
+
 4. Anything else you would like to share?
 
-More thoughts:
+More thoughts / Summary:
 
 Ideas for additional endpoints, verification and error messages: 
 
-- incorrect city/country combo in CSV file
-- how to allow for user to input csv file + check for incorrect columns or data or format
-- no user found, wrong spelling of name, etc.
-- endpoints to mix search options, such as search for users by profession AND country 
+- Check for and have Error Handling for incorrect city/country combinations in CSV file. 
+- Allow for user to input csv file + check for incorrect columns or data or format.
+- Check for users / countries / id's with similar spelling to allow for slight misspellings. 
+- Add endpoints to mix search options, such as searching for users by profession AND country simultaneously. 
 	
 Ideas for improving UI: 
  
-- add more buttons to screen for ease of usability 
-- add CSS to make it easier to use and more aesthetically pleasing 
+- Add more buttons to screen for ease of usability. 
+- Add CSS to make it easier to use and more aesthetically pleasing. 
 	
 Ideas for additional functionality:
 
-- maybe when a list appears, a user could click button next to each listed user to see their full info 
-  (probably too complex to do by project deadline)
+- Maybe when a list appears, a user could click button next to each listed user to see their full info. 
 	
 Overall future TO DO's: 
 
-- change drop downs to not be static and instead of pulling info from csv file (for countries + professions)
-- add database storage instead of storing inside of the StoreUserData class.
+- Change drop downs to not be static and instead pull info from CSV file (for countries + professions dropdowns). 
+- Add database storage instead of storing data temporarily inside of the StoreUserData class.
+
+____________________________________________________________________
+
