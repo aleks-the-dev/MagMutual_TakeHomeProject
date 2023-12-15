@@ -1,8 +1,8 @@
 # Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Running the Application](#run-application)
-4. [FAQs](#faqs)
+1. General Project Info
+2. Technologies Used
+3. Running the Application
+4. Answers to Project Questions
 
 General Info
 
