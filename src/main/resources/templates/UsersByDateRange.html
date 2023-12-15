@@ -5,7 +5,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|Users created between ${date1} and ${date2}: ${usersByDateRange}|" />
+    <p th:text="|Users created between ${date1} and ${date2}:|" />
+    <br>
+    <p th:text="|${usersByDateRange}|" />
+    <br><br>
         <a href='/dateRangeInput'><button>Search by a Different Date Range</button></a>
     <a href='/'><button>Back to Home Page</button></a>
 </body>

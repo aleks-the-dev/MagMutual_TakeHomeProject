@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|Users who are ${job}s: ${usersByJob}|" />
+    <p th:text="|Users who are ${job}s:|" /><br>
+    <p th:text="|${usersByJob}|" /><br><br>
     <a href='/jobInput'><button>Search by a Different Profession</button></a>
     <a href='/'><button>Back to Home Page</button></a>
 </body>

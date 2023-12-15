@@ -1,5 +1,7 @@
 package com.takehomeproject.MagMutual_AleksBelotserkovskaya;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -68,12 +70,18 @@ public class WebController {
 	// Endpoint to go to page where you enter country
 	@GetMapping("/countryInput") 
 		public String countryInput(Model model) {
+		s.storeUsers(fileName);
+		ArrayList<String> countries = s.getCountries();
+		model.addAttribute("countries", countries);
 		return "entercountry";
 	}
 				
 	// Endpoint to go to page where you enter profession
 	@GetMapping("/jobInput") 
 		public String jobInput(Model model) {
+		s.storeUsers(fileName);
+		ArrayList<String> jobs = s.getJobs();
+		model.addAttribute("jobs", jobs);
 		return "enterjob";
 	}
 				
@@ -108,7 +116,5 @@ public class WebController {
 	// ( for countries + professions) 
 	// 
 	// 3) answer project questions
-	// 
-	// 4) if i have time, make it look prettier (mostly user info page + display of list of users) 
 
 }

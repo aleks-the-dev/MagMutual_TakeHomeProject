@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|Users from ${country}: ${usersByCountry}|" />
+    <p th:text="|Users from ${country}:|" />
+    <p th:text="|${usersByCountry}|" />
         <a href='/countryInput'><button>Search by a Different Country</button></a>
     <a href='/'><button>Back to Home Page</button></a>
 </body>

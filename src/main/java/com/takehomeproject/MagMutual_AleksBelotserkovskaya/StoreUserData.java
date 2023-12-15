@@ -13,6 +13,8 @@ public class StoreUserData {
 	HashMap<String, String> professionToUserMapping;
 	HashMap<String, String> countryToUserMapping;
 	HashMap<String, String> dateToUserMapping;
+	ArrayList<String> countries;
+	ArrayList<String> jobs;
 	
 	// fileName = "src/main/java/com/takehomeproject/MagMutual_AleksBelotserkovskaya/UserInformation.csv";
 	
@@ -21,6 +23,8 @@ public class StoreUserData {
 		idToUserMapping = new HashMap<>();
 		professionToUserMapping = new HashMap<>();
 		countryToUserMapping = new HashMap<>();
+		countries = new ArrayList<>();
+		jobs = new ArrayList<>();
 		dateToUserMapping = new HashMap<>();
 		
 		users = ReadCSVFile.readFile(fileName);
@@ -40,6 +44,14 @@ public class StoreUserData {
 	
 	public String getUsersByCountry(String country) {
 		return countryToUserMapping.get(country);
+	}
+	
+	public ArrayList<String> getCountries() {
+		return countries;
+	}
+	
+	public ArrayList<String> getJobs() {
+		return jobs;
 	}
 	
 	public String getUsersByDateRange(String date1, String date2) {
@@ -72,6 +84,7 @@ public class StoreUserData {
 		for (User u : users) {
 			if (professionToUserMapping.get(u.getProfession()) == null) {
 				professionToUserMapping.put(u.getProfession(), u.getUserName());
+				jobs.add(u.getProfession());
 				// System.out.println("added " + u.getProfession());
 				
 			} else {
@@ -84,6 +97,7 @@ public class StoreUserData {
 		for (User u : users) {
 			if (countryToUserMapping.get(u.getCountry()) == null) {
 				countryToUserMapping.put(u.getCountry(), u.getUserName());
+				countries.add(u.getCountry());
 				// System.out.println("added " + u.getCountry());
 				// System.out.println("users: " + countryToUserMapping.get(u.getCountry()));
 			} else {
